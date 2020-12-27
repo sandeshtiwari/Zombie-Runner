@@ -48,11 +48,11 @@ public class EnemyAI : MonoBehaviour
     private void EngageTarget()
     {
         FaceTarget();
-        if (distanceToTarget >= navMeshAgent.stoppingDistance)
+        if (distanceToTarget >= navMeshAgent.stoppingDistance && navMeshAgent.enabled)
         {
             ChaseTarget();
         }
-        if(distanceToTarget <= navMeshAgent.stoppingDistance)
+        if(distanceToTarget <= navMeshAgent.stoppingDistance && navMeshAgent.enabled)
         {
             AttackTarget();
         }
